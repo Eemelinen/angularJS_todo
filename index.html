@@ -2,23 +2,24 @@
 <html lang="en">
 <head>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AngularJS</title>
 </head>
 <!-- Angular app initiated -->
 <body ng-app="todoList">
-  <h1>AngularJS</h1>
 
-  <!-- <h2>Courses to take:</h2> -->
+  
+  <h1>AngularJS</h1>
+  
+  <!-- Navigation enabled -->
   <div ng-controller="MainController">
-    <singlelist mylist="todo"></singlelist>
-    <input ng-model="addTodo" type="text">
-    <button ng-click="addItem(todo.list, addTodo)">Add</button>
-    
-    <singlelist mylist="courses"></singlelist>
-    <input ng-model="addCourse" type="text">
-    <button ng-click="addItem(courses.list, addCourse)">Add</button>
+    <ul>
+      <li><a href="#!todo">Todo</a></li>
+      <li><a href="#!courses">Courses</a></li>
+    </ul>
+    <div ng-view></div>
   </div>
 
   <!-- Modules -->
