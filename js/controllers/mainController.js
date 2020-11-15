@@ -1,6 +1,13 @@
 app.controller("MainController", ['$scope', function($scope) {
-  $scope.list = ['Learn AngularJS', "Play PS4", "Watch Sopranos."];
-  $scope.addItem = function() {
-    $scope.list.push($scope.addTodo);
+  $scope.todo = {
+    list: ["Learn AngularJS", "Play PS4", "Watch Sopranos."],
+  }
+
+  $scope.courses = {
+    list: ["Angular", "PHP", "React"],
+  };
+
+  $scope.addItem = function(subject, item) {
+    subject.push(item);
   }
 }]);
